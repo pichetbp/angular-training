@@ -1,0 +1,15 @@
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let item of courses; let i = index">
+    <img *ngIf="item.course === 'Angular'" src="assets/images/angular.jpg" alt="Angular" class="registration-image" />
+    <img *ngIf="item.course === 'ReactJS'" src="assets/images/reactjs.jpg" alt="ReactJS" class="registration-image" />
+    <img *ngIf="item.course === 'Vue'" src="assets/images/vue.png" alt="Vue" class="registration-image" />
+    <h3>Name: {{ item.name }}</h3>
+    <p>Email: {{ item.email }}</p>
+    <p>Course: {{ item.course }}</p>
+    <div class="buttons">
+      <button (click)="editCourse(item.id)">Edit</button>
+      <button (click)="deleteCourse(item.id)">Delete</button>
+    </div>
+  </div>
+
+</div>

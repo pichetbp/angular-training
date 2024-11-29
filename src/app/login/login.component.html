@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>This is login form</h2>
+    <form (submit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" required [(ngModel)]="authModel.username"
+                name="username" />
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" required [(ngModel)]="authModel.password"
+                name="password" />
+        </div>
+        <div class="buttons">
+            <button type="submit">submit</button>
+            <button type="button" (click)="onClear()">clear</button>
+        </div>
+    </form>
+    <div *ngIf="errorMessage">
+        <p>Username: {{ errorMessage }}</p>
+    </div>
+
+</div>

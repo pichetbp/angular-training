@@ -1,0 +1,13 @@
+<div class="confirm-container">
+  <h2>Confirmation</h2>
+  <p class="message">Thank you, {{ registration.name }}, for registering!</p>
+  <div class="info">
+    <p><strong>Email:</strong> {{ registration.email }}</p>
+    <p><strong>Course:</strong> {{ registration.course }}</p>
+  </div>
+  <div class="buttons">
+    <button class="btn" (click)="goBack()">Back to Courses</button>
+    <button class="btn" (click)="goHome()">Home</button>
+    <button class="btn-submit" (click)="onSubmit()">Submit</button>
+  </div>
+</div>
